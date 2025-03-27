@@ -1,0 +1,137 @@
+Python program to remove given character from String.
+string=input("Enter a String:")
+character_to_remove=input("Enter a character from string to remove:")
+
+modified_string=string.replace(character_to_remove," ")
+
+print(modified_string)
+
+--------------------------------------------------------------------------------------------
+Python Program to count occurrence of a given characters in string.
+
+string=input("Enter a String:")
+character=input("Enter a Character:")
+
+string.count(character)
+print(f"The character '{character}' occurs {string.count(character)} times in a string ")
+
+
+--------------------------------------------------------------------------------------------
+Python program to check a String is palindrome or not.
+
+string=input("Enter a String:")
+
+if string==string[::-1]:
+    print("The String is a palindroem")
+else: 
+    print("The String is not  a palindroem")
+
+--------------------------------------------------------------------------------------------
+Python program to check given character is vowel or consonant.
+character=input("Enter a character")
+
+for chr in character:
+    if chr=='a' or chr=='A' or chr=='e' or chr=='E' or chr=='i' or chr=='I' or chr=='o' or chr=='O' or chr=='u' or chr=='U':
+        print("It is a vowel")
+    else:
+        print("It is a consonant")
+ 
+--------------------------------------------------------------------------------------------
+Python program to check given character is digit or not.
+
+char = input("Enter a character: ")
+
+if char.isdigit():
+    print("The character is a digit.")
+else:
+    print("The character is not a digit.")
+--------------------------------------------------------------------------------------------
+Python program to check given character is digit or not using isdigit() method.
+char = input("Enter a character: ")
+
+if '0' <= char <= '9':
+    print(f"{char} is a digit.")
+else:
+    print(f"{char} is not a digit.")
+
+--------------------------------------------------------------------------------------------
+Python program to replace the string space with a given character using replace() method.
+
+input_str = input("Enter a string: ")
+char = input("Enter a character to replace spaces: ")
+
+result = input_str.replace(" ", char)
+print("Result:", result)
+
+--------------------------------------------------------------------------------------------
+Python program to convert lowercase char to uppercase of string.
+string = input("Enter a string: ")
+
+result = string.upper()
+
+print("Result:", result)
+
+--------------------------------------------------------------------------------------------
+Python program to convert lowercase vowel to uppercase in string.
+
+string = input("Enter a string: ")
+
+result = string.lower()
+
+print("Result:", result)
+
+--------------------------------------------------------------------------------------------
+Python program to delete vowels in a given string.
+nput_str = input("Enter a string: ")
+
+result = input_str.replace("a", "").replace("e", "").replace("i", "").replace("o", "").replace("u", "").replace("A", "").replace("E", "").replace("I", "").replace("O", "").replace("U", "")
+
+print("Result:", result)
+--------------------------------------------------------------------------------------------
+
+Python program to count alphabets, digits and special characters.
+input_str = input("Enter a string: ")
+
+alphabet_count = 0
+digit_count = 0
+special_char_count = 0
+
+for char in input_str:
+    if char.isalpha():
+        alphabet_count += 1
+    elif char.isdigit():
+        digit_count += 1
+    elif not char.isspace():
+        special_char_count += 1
+
+
+print("Alphabet Count:", alphabet_count)
+print("Digit Count:", digit_count)
+print("Special Character Count:", special_char_count)
+--------------------------------------------------------------------------------------------
+
+Python program to separate characters in a given string.
+
+input_str = input("Enter a string: ")
+
+print("Original String:", input_str)
+print("Separated Characters:")
+for char in input_str:
+    print(char)
+---------------------------------------------------------------------------------------------
+
+WAP to replace every character by its next subsequent character.
+
+str = input("Enter a string: ")
+
+print("Original String:", str)
+print("Result:")
+result = ""
+for char in str:
+    if char == 'z' or char == 'Z':
+        result += 'a' 
+    elif char == '9':
+        result += '0'
+    else:
+        result += chr(ord(char) + 1)
+print(result)

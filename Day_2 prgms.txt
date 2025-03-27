@@ -1,0 +1,164 @@
+Check that number is even or odd
+
+n=int(input("Enter Number:"))
+if n%2==0:
+    print(n,"Number is Even")
+else:
+    print(n,"Number is Odd")
+
+-----------------------------------------------------------------------   
+Check number is + ve , -ve or zero 
+
+n=int(input("Enter Number:"))
+if n>0:
+    print(n,"is Positive")
+elif n<0:
+    print(n,"is Negative")
+else:
+    print("Number is Zero")
+
+-------------------------------------------------------------------------
+
+Write a Python program to enter two numbers and find their sum.
+
+n1=int(input("Enter Number1:"))
+n2=int(input("Enter Number2:"))
+sum=n1+n2
+print(f"The sum of {n1} and {n2} is {sum}")
+
+--------------------------------------------------------------------------
+
+Write a Python program to enter two numbers and perform all arithmetic
+
+print("+ :Addition")
+print("- :Substraction")
+print("/ :Division")
+print("// :Floor")
+
+operator= input("Enter Operator")
+
+n1=int(input("Enter Number 1: "))
+n2=int(input("Enter Number 2: "))
+
+match operator:
+    case "+":
+        print("Addition is:",n1+n2)
+    case "-":
+        print("Substraction is:",n1-n2)
+    case "/":
+        print("Division is:",n1/n2)
+    case "//":
+        print("Floor Division is:",n1//n2)
+    case default:
+        print("Invalid operator")
+
+---------------------------------------------------------------------------------------
+
+
+Write a Python program to enter length and breadth of a rectangle and find its Area
+
+
+length=float(input("Enter length"))
+breadth=float(input("Enter breadth"))
+
+Area_of_Rectangle =length*breadth
+
+print("Area of Rectangle is", Area_of_Rectangle)
+
+
+----------------------------------------------------------------------------------------
+
+Write a Python program to enter base and height of a triangle and find its area..
+
+base=float(input("Enter base"))
+height=float(input("Enter height"))
+
+Area_of_Triangle =0.5*base*height
+
+print("Area of triangle is", Area_of_Triangle)
+
+------------------------------------------------------------------------------------------
+Write a python Program to calculate Square of given number
+
+num=float(input("Enter a Number"))
+sqr=num**2
+print("The Square of", num, "is", sqr)
+
+-------------------------------------------------------------------------------------------
+Write a python Program to calculate cube of given number
+
+num=float(input("Enter a Number"))
+
+cube=num ** 3
+
+print("The cube of", num, "is", cube)
+
+--------------------------------------------------------------------------------------------
+Write a Python program to enter marks of five subjects and calculate total, average
+
+print("Enter the marks of 5 subjects:")
+
+sub1=float(input("Enter marks of subject 1:"))
+sub2=float(input("Enter marks of subject 2:"))
+sub3=float(input("Enter marks of subject 3:"))
+sub4=float(input("Enter marks of subject 4:"))
+sub5=float(input("Enter marks of subject 5:"))
+
+total_marks=sub1+sub2+sub3+sub4+sub5
+avg_marks=total_marks/5
+percentage=(total_marks/500)*100
+
+print("Total Marks:",total_marks)
+print("Average Marks:",avg_marks)
+print("Percentage:",percentage)
+
+---------------------------------------------------------------------------------------------
+Write a Python program to enter P, T, R and calculate Simple Interest.
+
+P=float(input("Enter Principal Amount :"))
+T=float(input("Enter Time Period in year :"))
+R=float(input("Enter Rate of Interest :"))
+
+SI=(P*T*R)/100
+
+print("The simple interest is :", SI)
+
+
+---------------------------------------------------------------------------------------------
+Swap values of two integer variables.
+
+a=10
+b=20
+temp=a
+a=b
+b=temp
+print(a)
+print(b)
+---------------------------------------------------------------------------------------------
+Write a program to accept 2 number and find greatest
+
+n1=int(input("Enter Number 1"))
+n2=int(input("Enter Number 2"))
+
+if n1>n2:
+    print(n1, "is greater than", n2)
+elif n2>n1:
+    print(n2, "is greater than", n1)
+else:
+    print("both are same")
+
+---------------------------------------------------------------------------------------------
+WAP to accept 3 numbers & print the greatest
+
+n1=int(input("Enter 1st Number:"))
+n2=int(input("Enter 2nd Number:"))
+n3=int(input("Enter 3rd Number:"))
+if (n1>=n2) and (n1>=n3):
+    largest=n1
+elif (n2>=n1) and (n2>=n3):
+    largest=n2
+else:
+    largest=n3
+
+print("The Largest number is: ", largest)
+    
