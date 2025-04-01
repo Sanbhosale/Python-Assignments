@@ -1,0 +1,30 @@
+l=[1,2,3,4,5]
+result=list(map(lambda a:a**3,l))
+result
+
+
+l=[-1,2,-3,4,5]
+result=list(filter(lambda a:a<0,l))
+result
+
+
+employee = {"Amol": 45000, "Rohan": 32000, "Suraj": 42000, "Akshay": 34000}
+
+new_employee = dict(map(lambda item: (item[0], item[1] * 1.15 if item[1] > 40000 else item[1]),employee.items()))
+
+print(new_employee)
+
+filter_emp = dict(filter(lambda item: item[1] > 40000,employee.items()))
+
+print(filter_emp)
+
+
+products = {"P1": 3000, "P2": 2000, "P3": 1000, "P4": 900, "P5": 800,}
+
+new_products = dict(map(lambda item: (item[0], item[1] * 1.05), products.items()))
+
+print(new_products)
+
+filter_products = dict(filter(lambda item: item[1] < 1000, products.items()))
+
+print(filter_products)
