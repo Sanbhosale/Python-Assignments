@@ -1,0 +1,143 @@
+class Products():
+    def accept_product(self, code, name, price):
+        self.code=code
+        self.name=name
+        self.price=price
+
+    def display_product(self):
+        print(f'code={self.code}, name={self.name},price={self.price}')
+
+Product1=Products()
+Product1.accept_product(101,'Laptop',90000)
+Product1.display_product()
+
+Product1=Products()
+Product1.accept_product(501,'AC',40000)
+Product1.display_product()
+
+--------------------------------------------------------------------------------------------------------
+#Access Specifier
+#private 
+class Products():
+    def accept_product(self, code, name, price):
+        self.__code=code
+        self.__name=name
+        self.__price=price
+
+    def display_product(self):
+        print(f'code={self.__code}, name={self.__name},price={self.__price}')
+
+Product1=Products()
+Product1.accept_product(101,'Laptop',90000)
+Product1.display_product()
+
+Product1=Products()
+Product1.accept_product(501,'AC',40000)
+Product1.display_product()
+
+------------------------------------------------------------------------------------------------------------
+
+#Create a class Student,  create accept method to get the 3 subjects marks
+#Create calculate method to get total & percentage
+#Create display method to show total marks & percentage
+class Student():
+    def accept(self, subject1, subject2, subject3):
+        self.subject1=subject1
+        self.subject2=subject2
+        self.subject3=subject3
+
+    def calculate(self):
+        self.total = self.subject1 + self.subject2 + self.subject3
+        self.percentage = (self.total / 300) * 100  # Assuming each subject is out of 100
+    def display(self):
+        print(f"Total Marks: {self.total}, Percentage: {self.percentage}%")
+       
+
+subject1 = float(input("Enter marks for Subject 1: "))
+subject2 = float(input("Enter marks for Subject 2: "))
+subject3 = float(input("Enter marks for Subject 3: "))
+
+
+stud=Student()
+stud.accept(subject1, subject2, subject3)
+stud.calculate()
+stud.display()
+
+-------------------------------------------------------------------------------------------------------------
+#Create class Circle, accept the radius & calculate the area of circle & display
+class Circle():
+    def accept(self, radius):
+        self.radius=radius
+    def display(self):
+        area = 3.14 * self.radius ** 2
+        print(f"The circle with radius {self.radius} has an area of: {area:.2f}")
+radius = float(input("Enter the radius of the circle: "))
+circle1 = Circle()
+circle1.accept(radius)
+circle1.display()
+-------------------------------------------------------------------------------------------------
+
+#Create product class accept  code, name, price , give 20% discount if price is >10000,  5k-10k 15% discount , below 5k 5% discount
+#Display code, name, actual price & discounted price
+class Products():
+    def accept(self, code, name, price):
+        self.code=code
+        self.name=name
+        self.price=price
+        
+    def discount(self):
+        if self.price > 10000:
+            discount = 0.20
+        elif 5000 <= self.price <= 10000:
+            self.discount = 0.15
+        else:
+            discount = 0.05
+            self.discount_price=self.price * (1 - discount)
+
+    def display(self):
+        print(f'code={self.code}, name={self.name}, price={self.price}, discount={self.discount_price}')
+        
+code = int(input("Enter product code: "))
+name = input("Enter product name: ")
+price = float(input("Enter product price: "))
+
+product = Products()
+product.accept(code, name, price)
+product.discount()
+product.display()
+
+------------------------------------------------------------------------------------------------------------
+#constructor
+class Circle():
+    def __init__(self, radius):
+        self.__radius=radius
+    def display(self):
+        area = 3.14 * self.__radius ** 2
+        print(f"The circle with radius {self.__radius} has an area of: {area:.2f}")
+circle1 = Circle(5)
+circle1.display()
+
+-----------------------------------------------------------------------------------------------------------
+class Products():
+    def __init__(self, code, name, price):
+        self.__code=code
+        self.__name=name
+        self.__price=price
+        
+    def discount(self):
+        if self.__price > 10000:
+            discount = 0.20
+        elif 5000 <= self.__price <= 10000:
+            self.discount = 0.15
+        else:
+            discount = 0.05
+            self.__discount_price=self.__price * (1 - discount)
+
+    def display(self):
+        print(f'code={self.__code}, name={self.__name}, price={self.__price}, discount={self.__discount_price}')
+        
+
+product = Products(101,"headphones",3000)
+
+product.discount()
+product.display()
