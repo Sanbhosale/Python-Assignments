@@ -1,0 +1,144 @@
+#Create a dictionary to hold employee data like id, name,salary
+employees_data={
+    101: {"name": "Salman Khan", "salary": 50000},
+    102: {"name": "Shah Rukh Khan", "salary": 60000},
+    103: {"name": "Hrithik Roshan", "salary": 50500},
+    }
+
+print("Employee IDs:")
+for key in employees_data.keys():
+    print(key)
+    
+print("\nEmployee Data:")
+for value in employees_data.values():
+    print(value)
+
+print("\nEmployee IDs and Data:")
+for key, value in employees_data.items():
+    print(f"ID: {key}, Data: {value}")
+
+-------------------------------------------------------------------------------------------------------------
+
+Create a dictionary to hold product data like code,name,price
+products = {
+    "P01": {"name": "Product 1", "price": 100},
+    "P02": {"name": "Product 2", "price": 200},
+    "P03": {"name": "Product 3", "price": 300.0},
+}
+
+print("Product Codes:")
+for key in products.keys():
+    print(key)
+
+print("\nProduct Data:")
+for value in products.values():
+    print(value)
+
+print("\nProduct Codes and Data:")
+for key, value in products.items():
+    print(f"Code: {key}, Data: {value}")
+
+
+products["P04"] = {"name": "Product 4", "price": 400}
+print("\nUpdated Products:")
+for key, value in products.items():
+    print(f"Code: {key}, Data: {value}")
+
+
+del products["P02"]
+print("\nProducts after deletion:")
+for key, value in products.items():
+    print(f"Code: {key}, Data: {value}")
+
+----------------------------------------------------------------------------------------------------------------
+
+#Write a Python program to print all unique values in a dictionary.
+#Original List: [{'V': 'S001'}, {'V': 'S002'}, {'VI': 'S001'}, {'VI': 'S005'}, {'VII':'S005'}, {'V': 'S009'},{'VIII': 'S007'}]
+#Unique Values: {'S009', 'S002', 'S007', 'S005', 'S001'}
+original_list = [ {'V': 'S001'}, {'V': 'S002'}, {'VI': 'S001'}, {'VI': 'S005'}, 
+                 {'VII': 'S005'}, {'V': 'S009'}, {'VIII': 'S007'} ]
+unique_values = set()
+
+
+for dictionary in original_list:
+    for value in dictionary.values():
+        unique_values.add(value)
+
+
+print("Unique Values:", unique_values)
+
+-----------------------------------------------------------------------------------------------------------------
+
+#Write a Python program to create a dictionary from a string.
+#Track the count of the letters from the string.
+#Sample string : 'w3resource'
+#Expected output: {'3': 1, 's': 1, 'r': 2, 'u': 1, 'w': 1, 'c': 1, 'e': 2, 'o': 1}
+
+string = 'w3resource'
+count = {}
+for char in string:
+    
+    if char in count:
+       
+        count[char] += 1
+        
+    else:
+        
+        count[char] = 1
+
+print(count)
+
+-------------------------------------------------------------------------------------------------------------------
+
+#Combine two dictionary adding values for common keys
+#Input: dict1 = {'a': 12, 'for': 25, 'c': 9}
+#dict2 = {'python': 100, 'java': 200, 'for': 300}
+#Output: {'for': 325, 'python': 100, 'java': 200}
+
+dict1 = {'a': 12, 'for': 25, 'c': 9}
+dict2 = {'python': 100, 'java': 200, 'for': 300}
+
+combined_dict = {}
+for key in set(dict1) | set(dict2):
+    value = dict1.get(key, 0) + dict2.get(key, 0)
+    if value != 0 and key in dict2:
+        combined_dict[key] = value
+
+print(combined_dict)
+
+-----------------------------------------------------------------------------------------------------------------
+#Combine two dictionary adding values for common keys
+#Input: dict1 = {'a': 12, 'for': 25, 'c': 9}
+#dict2 = {'python': 100, 'java': 200, 'for': 300}
+#Output: {'for': 325, 'python': 100, 'java': 200}
+
+dict1 = {'a': 12, 'for': 25, 'c': 9}
+dict2 = {'python': 100, 'java': 200, 'for': 300}
+
+combined_dict = {}
+for key in set(dict1) | set(dict2):
+    value = dict1.get(key, 0) + dict2.get(key, 0)
+    if value != 0 and key in dict2:
+        combined_dict[key] = value
+
+print(combined_dict)
+
+-----------------------------------------------------------------------------------------------------------------
+#dict1={101:{“Apple” :10, “Mango” :5 },
+#102 :{“Apple” :15, “Mango” :8, “Cherry” :5 },
+#103: {“Apple” :10} }
+#Output Dict2= {“ Apple” :35, “Mango” :13, “Cherry” :5 }
+
+dict1 = {
+    101: {"Apple": 10, "Mango": 5},
+    102: {"Apple": 15, "Mango": 8, "Cherry": 5},
+    103: {"Apple": 10}
+}
+
+dict2 = {}
+for i in dict1.values():
+    for key, value in i.items():
+        if key in dict2:
+            dict2[key] += value
+        else:
+            dict2[key] = value
